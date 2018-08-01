@@ -1,5 +1,6 @@
 package befaster.solutions.SUM;
 
+import befaster.solutions.SUM.exception.InvalidParameterException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,8 +22,8 @@ public class SumSolutionTest {
     }
 
 
-    @Test
+    @Test(expected = InvalidParameterException.class)
     public void computeParamOneNegative() {
-        assertThrows(sum.compute(-1, 1), equalTo(2));
+        sum.compute(-1, 1);
     }
 }
