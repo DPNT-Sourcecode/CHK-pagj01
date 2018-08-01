@@ -10,7 +10,7 @@ public class SumSolution {
         if (x < 0 || x > 100) {
             throw new InvalidParameterException();
         }
-        if (y < 0 ) {
+        if (y < 0 || y > 100) {
             throw new InvalidParameterException();
         }
         return x + y;

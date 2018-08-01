@@ -42,4 +42,14 @@ public class SumSolutionTest {
     public void computeParamTwoGreaterOneHundred() {
         sum.compute(1, 101);
     }
+
+    @Test(expected = InvalidParameterException.class)
+    public void computeBothParamsGreaterOneHundred() {
+        sum.compute(101, 101);
+    }
+
+    @Test(expected = InvalidParameterException.class)
+    public void computeBothParamsNegative() {
+        sum.compute(-1, -1);
+    }
 }
