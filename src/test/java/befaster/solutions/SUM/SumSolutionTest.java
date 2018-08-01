@@ -26,4 +26,20 @@ public class SumSolutionTest {
     public void computeParamOneNegative() {
         sum.compute(-1, 1);
     }
+
+    @Test(expected = InvalidParameterException.class)
+    public void computeParamOneGreaterOneHundred() {
+        sum.compute(101, 1);
+    }
+
+
+    @Test(expected = InvalidParameterException.class)
+    public void computeParamTwoNegative() {
+        sum.compute(1, -1);
+    }
+
+    @Test(expected = InvalidParameterException.class)
+    public void computeParamTwoGreaterOneHundred() {
+        sum.compute(1, 101);
+    }
 }
